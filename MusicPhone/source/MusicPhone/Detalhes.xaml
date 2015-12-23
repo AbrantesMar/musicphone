@@ -1,0 +1,106 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MusicPhone.Detalhes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot contains the root grid where all other page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FFF9F6F6">
+        <controls:Panorama x:Name="prmDetalhes">
+            <controls:Panorama.Title>
+                <StackPanel Orientation="Horizontal"  Height="300" Margin="0,0,0,0" Background="#FF18853A">
+                    <!--<StackPanel.Background>
+                        <ImageBrush ImageSource="Img/barraparafoto.png"></ImageBrush>
+                    </StackPanel.Background>-->
+                    <Image x:Name="imgTitle" Width="200" Stretch="Fill" Height="230" Margin="0,70,0,0" />
+                    <StackPanel>
+                        <TextBlock x:Name="tltNomeArtista" TextWrapping="Wrap" Foreground="#FFFBFDFC" />
+                        <TextBlock x:Name="txblCategorias" FontSize="30" TextWrapping="Wrap" Foreground="#FFF2F9F4" />
+                    </StackPanel>
+                </StackPanel>
+            </controls:Panorama.Title>
+            <!--Panorama item Music-->
+            <controls:PanoramaItem Header="Music" BorderBrush="Black" Foreground="#FF18853A">
+                <Grid x:Name="grdMusic">
+                    <ListBox x:Name="lstMusic" FontSize="30" DataContext="Item" SelectionChanged="lstMusic_SelectionChanged" Foreground="#FF169349">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="{Binding desc}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item Discografia-->
+            <controls:PanoramaItem Header="Discografia" x:Name="pnIDiscografia" Foreground="#FF18853A">
+                <Grid x:Name="grdDiscografia">
+                    <ListBox x:Name="lstAlbuns" FontSize="30" Margin="0,0,0,0" DataContext="Item3" Height="444" Foreground="#FF169349">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Height="100">
+                                    <!--<Image x:Name="{Binding imgDiscografia}"></Image>-->
+                                    <TextBlock Text="{Binding desc}" />
+                                    <!--="{Binding}" Tag="{Binding Code}"></TextBlock>-->
+                                    <TextBlock Text="{Binding year}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama item Notícias
+            <controls:PanoramaItem Header="Notícias">
+                <Grid>
+                    <ListBox x:Name="lstNoticias" FontSize="30" DataContext="News" Margin="0,0" Height="453">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Height="100">
+                                    <TextBlock x:Name="{Binding txblNoticias}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </controls:PanoramaItem>-->
+
+            <!--Panorama item two-->
+            <controls:PanoramaItem Header="Artists related" Foreground="#FF18853A">
+                <Grid>
+                    <ListBox x:Name="lstAtistRelated" FontSize="30" DataContext="Related" Margin="0,0,0,0" Height="447" SelectionChanged="lstAtistRelated_SelectionChanged"  Foreground="#FF169349">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical" Height="100">
+                                    <TextBlock Text="{Binding name}"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+        <ProgressBar Margin="0,0,0,765" x:Name="prbArtista" IsIndeterminate="True" Visibility="Visible"></ProgressBar>
+    </Grid>
+
+    <!--Panorama-based applications should not show an ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar Mode="Minimized" IsVisible="False"  x:Name="appbarPrincipal">
+            <shell:ApplicationBarIconButton IconUri="/Img/botaook.png" Text="Salvar" Click="ApplicationBarIconButton_Click" />
+            <shell:ApplicationBarIconButton IconUri="/Img/X.png" Text="Limpar"/>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

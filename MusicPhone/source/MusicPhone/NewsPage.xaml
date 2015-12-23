@@ -1,0 +1,60 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MusicPhone.NewsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="#FFFBF4F4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#FF18853A">
+            <!--<StackPanel.Background>
+                <ImageBrush ImageSource="Img/barraparafoto.png" />
+            </StackPanel.Background>-->
+            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,0,0,0" Orientation="Horizontal" Height="60">
+                <Image Source="Img/iconemusica.png" x:Name="imgMusic" Width="50" />
+                <TextBlock x:Name="txblTitlo" Text="Music Phone" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Height="36" Width="147" FontSize="25"/>
+            </StackPanel>
+        </StackPanel>
+        <!--TitlePanel contains the name of the application and page title-->
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0" Height="768" VerticalAlignment="Top">
+            <Image x:Name="imgNewsPrincipal" Height="483" VerticalAlignment="Top" Stretch="Fill" Margin="0,279,127,138" />
+            <ScrollViewer Margin="0,0,127,495">
+                <TextBlock x:Name="txblLetraMusica" Margin="0,0,0,0" Height="247" TextWrapping="Wrap" FontSize="34"  Foreground="#FF18853A" Width="319" />
+            </ScrollViewer>
+            <ListBox x:Name="lstImagenNews" DataContext="News" Margin="331,279,0,0" SelectionChanged="lstImagenNews_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                            <Image Source="{Binding pic_src}" Height="115" Width="115" Stretch="Fill" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

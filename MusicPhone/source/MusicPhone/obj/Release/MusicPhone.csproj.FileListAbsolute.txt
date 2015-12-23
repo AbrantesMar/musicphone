@@ -1,0 +1,13 @@
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\MusicPhone.csprojResolveAssemblyReference.cache
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\App.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\About.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Artista.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Detalhes.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Discografia.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Favoritos.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\ListaDetalhada.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\MainPage.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Musicas.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\NewsPage.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Novidades.g.cs
+E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\MusicPhone.g.resources
