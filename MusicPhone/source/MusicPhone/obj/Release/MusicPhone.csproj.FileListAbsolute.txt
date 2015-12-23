@@ -11,3 +11,16 @@ E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Musicas.g
 E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\NewsPage.g.cs
 E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Novidades.g.cs
 E:\Marcio\Projetos\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\MusicPhone.g.resources
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\MusicPhone.csprojResolveAssemblyReference.cache
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\App.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\About.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Artista.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Detalhes.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Discografia.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Favoritos.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\ListaDetalhada.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\MainPage.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Musicas.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\NewsPage.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\Novidades.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\source\MusicPhone\obj\Release\MusicPhone.g.resources

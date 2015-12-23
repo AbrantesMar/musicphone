@@ -217,25 +217,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Img\wifi.png" />
-    <Content Include="Img\about.png" />
     <Content Include="SplashScreenImage.jpg" />
-    <Resource Include="Img\abelha.png" />
-    <Resource Include="Img\barraparafoto.png" />
     <Resource Include="Background.png" />
     <Resource Include="ApplicationIcon.png" />
-    <Content Include="Img\botaook.png" />
-    <Resource Include="Img\fotodocd.png" />
-    <Resource Include="Img\iconealbum.png" />
-    <Resource Include="Img\iconeartistabanda.png" />
-    <Resource Include="Img\iconemusica.png" />
-    <Content Include="Img\X.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PhoneClassLibraryYouTube\PhoneClassLibraryYouTube.csproj">
       <Project>{D4DB9D2E-E3FE-4B67-B7D2-41DD32AD49EF}</Project>
       <Name>PhoneClassLibraryYouTube</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
