@@ -44,5 +44,20 @@ namespace MusicPhone.New
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+
+        private void listLoads_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void listArtist_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnAdicionarBar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -50,5 +50,15 @@ namespace MusicPhone.New
         {
 
         }
+
+        private void listMusicas_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void btnAdicionarBar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

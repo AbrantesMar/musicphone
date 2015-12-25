@@ -25,10 +25,10 @@
                     <TextBlock Foreground="Green">Artistas</TextBlock>
                 </PivotItem.Header>
                 <ListBox
-                            x:Name="listLoads"
+                            x:Name="listArtist"
                             ItemsSource="{Binding}"
                             Foreground="Green"
-                            FontSize="20" SelectionChanged="listLoads_SelectionChanged">
+                            FontSize="20" SelectionChanged="listArtist_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>

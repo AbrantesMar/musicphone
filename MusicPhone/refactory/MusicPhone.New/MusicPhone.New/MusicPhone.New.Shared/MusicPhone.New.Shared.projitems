@@ -33,5 +33,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Domain\Related.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Domain\TiltEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Domain\Toplyrics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Rests\BasicRequests.cs" />
   </ItemGroup>
 </Project>

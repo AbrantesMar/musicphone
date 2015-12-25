@@ -2,6 +2,8 @@
 using System.Net;
 using System.Windows;
 using System.Collections.Generic;
+using MusicPhone.New.Rests;
+using System.Threading.Tasks;
 //using Newtonsoft.Json;
 //using System.IO;
 
@@ -45,6 +47,12 @@ namespace MusicPhone.Domain
         }
 
         public event EventHandler<BuscaEventArgs> BuscaCompleted;
+
+        public async Task<List<Artist>> GetArtist(string nome)
+        {
+            List<Artist> a = await BasicRequests<Artist>.GetJson(null, nome + "/index.js");
+            return a;
+        }
 
         //public void BuscaArtiscaAsync(string nome)
         //{
