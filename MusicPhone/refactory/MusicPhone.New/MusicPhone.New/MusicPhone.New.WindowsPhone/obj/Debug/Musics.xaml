@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="MusicPhone.New.Musics"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPhone.New"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel
+        Background="White">
+        <StackPanel
+            Background="Green">
+            <TextBlock 
+                Margin="10, 10, 0, 0"
+                FontSize="30">
+                Music Phone
+            </TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image></Image>
+                <StackPanel>
+                    <TextBlock x:Name="txtName"
+                        FontSize="20"></TextBlock>
+                    <TextBlock x:Name="txtMusic"
+                               FontSize="20"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Pivot Height="571">
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="Green">
+                        Letra
+                    </TextBlock>
+                </PivotItem.Header>
+                <TextBlock
+                    x:Name="txtMusicLetra" 
+                    Height="436"
+                    TextWrapping="Wrap" 
+                    Foreground="Green"
+                    Margin="0,0,-0.333,0"></TextBlock>
+            </PivotItem>
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="Green">Tradutions</TextBlock>
+                </PivotItem.Header>
+                <TextBlock
+                    x:Name="txtMusicLTraducao" 
+                    Height="436"
+                    TextWrapping="Wrap" 
+                    Foreground="Green"
+                    Margin="0,0,-0.333,0"></TextBlock>
+            </PivotItem>
+        </Pivot>
+
+
+    </StackPanel>
+</Page>
+

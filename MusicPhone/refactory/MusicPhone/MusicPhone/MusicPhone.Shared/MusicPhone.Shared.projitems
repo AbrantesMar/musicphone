@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6162d2c1-84ce-4040-b725-22e30bfed930</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MusicPhone</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Control\Feed.xaml.cs">
+      <DependentUpon>Feed.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Control\Header.xaml.cs">
+      <DependentUpon>Header.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Control\ListFeeds.xaml.cs">
+      <DependentUpon>ListFeeds.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Album.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Artista.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\BuscarPorTrecho.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Discografia.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Genre.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Hotspot.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Item.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Item2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Item3.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Lyrics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Music.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\MusicSelect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\MusicYoutube.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\News.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Rank.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Related.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\TiltEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Toplyrics.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Control\Feed.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Control\Header.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Control\ListFeeds.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Image\W\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Image\WP\" />
+  </ItemGroup>
+</Project>

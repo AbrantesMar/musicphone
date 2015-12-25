@@ -1,0 +1,135 @@
+﻿<Page
+    x:Class="MusicPhone.New.Artists"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MusicPhone.New"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel
+        Background="White">
+        <StackPanel
+            Background="Green">
+            <TextBlock 
+                Margin="10, 10, 0, 0"
+                FontSize="30">
+                Music Phone
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" >
+                <Image Width="60" Height="60" x:Name="imgArtist" Source="{Binding image}"></Image>
+                <StackPanel>
+                    <TextBlock x:Name="txtName"
+                               FontSize="20"></TextBlock>
+                    <TextBlock x:Name="txtCategorias"
+                               FontSize="20"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Pivot Margin="10, 21" Height="536">
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="Green">Musics</TextBlock>
+                </PivotItem.Header>
+                <ListBox x:ConnectionId='3'
+                            x:Name="listMusicas"
+                            ItemsSource="{Binding}"
+                            Foreground="Green"
+                            FontSize="20"                                                >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                        TextWrapping="Wrap"
+                                        Foreground="Green"
+                                        x:Name="txtName"
+                                        Text="{Binding desc}">
+                                    </TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </PivotItem>
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="Green">Albums</TextBlock>
+                </PivotItem.Header>
+                <ListBox x:ConnectionId='2'
+                        x:Name="listAlbums"
+                        ItemsSource="{Binding}"
+                        Foreground="Green"
+                        FontSize="20"                                              >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                                TextWrapping="Wrap"
+                                                Foreground="Green"
+                                                x:Name="txtNameAlbuns"
+                                                Text="{Binding desc}">
+                                    </TextBlock>
+                                    <TextBlock
+                                                TextWrapping="Wrap"
+                                                Foreground="Green"
+                                                x:Name="txtNameYear"
+                                                Text="{Binding year}">
+                                    </TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </PivotItem>
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="Green">Relacionados</TextBlock>
+                </PivotItem.Header>
+                <ListBox x:ConnectionId='1'
+                            x:Name="listRelacionados"
+                            ItemsSource="{Binding}"
+                            Foreground="Green"
+                            FontSize="20"                                                     >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock
+                                                TextWrapping="Wrap"
+                                                Foreground="Green"
+                                                x:Name="txtNameRelacionados"
+                                                Text="{Binding name}">
+                                    </TextBlock>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </PivotItem>
+        </Pivot>
+    </StackPanel>
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton x:ConnectionId='4' 
+                    Icon="Filter" 
+                    IsCompact="False" 
+                    Label="Adicionar" 
+                    x:Name="btnAdicionarBar"                               />
+                <AppBarButton x:ConnectionId='5' 
+                    Icon="Favorite" 
+                    IsCompact="False" 
+                    Label="Adicionar" 
+                    x:Name="btnFavoritar"                            />
+            </CommandBar.PrimaryCommands>
+            <!--<CommandBar.SecondaryCommands>
+                <AppBarButton Label="Test01"/>
+                <AppBarButton Label="Test02"/>
+            </CommandBar.SecondaryCommands>-->
+        </CommandBar>
+    </Page.BottomAppBar>
+</Page>
+

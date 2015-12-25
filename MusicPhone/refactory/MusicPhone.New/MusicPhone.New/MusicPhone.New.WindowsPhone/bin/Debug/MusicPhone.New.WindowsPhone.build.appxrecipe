@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WIN81-1VOMTXJ6</Machine>
+    <WindowsUser>m.nunes.abrantes</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>250f23e6-f04f-4279-bc6f-3ef1c7d08844</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\MusicPhone.New.WindowsPhone.exe">
+      <PackagePath>MusicPhone.New.WindowsPhone.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\MusicPhone.New.WindowsPhone.xr.xml">
+      <PackagePath>MusicPhone.New.WindowsPhone.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\Artists.xbf">
+      <PackagePath>Artists.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\Musics.xbf">
+      <PackagePath>Musics.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone.New\MusicPhone.New\MusicPhone.New.WindowsPhone\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

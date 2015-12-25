@@ -1,0 +1,11 @@
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\MusicPhone.WindowsPhone.csprojResolveAssemblyReference.cache
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\App.g.i.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\App.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\MainPage.g.i.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\MainPage.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\App.xaml
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\MainPage.xaml
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\App.xbf
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\MainPage.xbf
+C:\Users\m.nunes.abrantes\Documents\Visual Studio 2013\Projects\MusicPhone\MusicPhone\refactory\MusicPhone\MusicPhone\MusicPhone.WindowsPhone\obj\Debug\XamlSaveStateFile.xml
