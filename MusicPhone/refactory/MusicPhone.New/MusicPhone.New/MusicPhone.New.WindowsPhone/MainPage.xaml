@@ -17,7 +17,7 @@
                 FontSize="30">
                 Music Phone
             </TextBlock>
-            <TextBox Margin="10, 5, 5, 5"></TextBox>
+            <TextBox x:Name="txtName" Margin="10, 5, 5, 5"></TextBox>
         </StackPanel>
         <Pivot Margin="10, 21" Height="553">
             <PivotItem>
@@ -31,35 +31,51 @@
                             FontSize="20" SelectionChanged="listArtist_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <StackPanel Orientation="Horizontal">
+                            <StackPanel 
+                                Orientation="Horizontal" Height="100">
+                                <Image 
+                                    x:Name="imgArtist" 
+                                    Source="{Binding pic_small}"
+                                    Width="100"
+                                    Height="100"/>
+                                <StackPanel Margin="10">
                                     <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblName">
-                                                Name
+                                        TextWrapping="Wrap"
+                                        Foreground="Green"
+                                        x:Name="txtName"
+                                        Text="{Binding name}">
                                     </TextBlock>
-                                    <TextBlock
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock
+                                            TextWrapping="Wrap"
+                                            Foreground="Green"
+                                            x:Name="txblUniques"
+                                            Text="Uniques">
+                                            </TextBlock>
+                                            <TextBlock
+                                            TextWrapping="Wrap"
+                                            Foreground="Green"
+                                            x:Name="txtUniques"
+                                            Text="{Binding uniques}">
+                                            </TextBlock>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock
                                                 TextWrapping="Wrap"
                                                 Foreground="Green"
-                                                x:Name="txtName"
-                                                Text="{Binding Name}">
-                                    </TextBlock>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblName">
-                                                Genre
-                                    </TextBlock>
-                                    <TextBlock
+                                                x:Name="txblViews"
+                                                Text="Views">
+                                            </TextBlock>
+                                            <TextBlock
                                                 TextWrapping="Wrap"
                                                 Foreground="Green"
-                                                x:Name="txtGenre"
-                                                Text="{Binding Genre}">
-                                    </TextBlock>
-                                </StackPanel>
+                                                x:Name="txtViews"
+                                                Text="{Binding views}">
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>    
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

@@ -17,13 +17,13 @@
                 FontSize="30">
                 Music Phone
             </TextBlock>
-            <StackPanel Orientation="Horizontal">
-                <Image></Image>
+            <StackPanel Orientation="Horizontal" >
+                <Image Width="60" Height="60" x:Name="imgArtist" Source="{Binding image}"></Image>
                 <StackPanel>
-                    <TextBlock>Nome</TextBlock>
-                    <TextBlock x:Name="txtName"></TextBlock>
-                    <TextBlock>Categorias</TextBlock>
-                    <TextBlock x:Name="txtCategorias"></TextBlock>
+                    <TextBlock x:Name="txtName"
+                               FontSize="20"></TextBlock>
+                    <TextBlock x:Name="txtCategorias"
+                               FontSize="20"></TextBlock>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
@@ -42,30 +42,10 @@
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblName">
-                                                Name
-                                    </TextBlock>
-                                    <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Green"
-                                                x:Name="txtName"
-                                                Text="{Binding Name}">
-                                    </TextBlock>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblName">
-                                                Genre
-                                    </TextBlock>
-                                    <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Green"
-                                                x:Name="txtGenre"
-                                                Text="{Binding Genre}">
+                                        TextWrapping="Wrap"
+                                        Foreground="Green"
+                                        x:Name="txtName"
+                                        Text="{Binding desc}">
                                     </TextBlock>
                                 </StackPanel>
                             </StackPanel>
@@ -78,39 +58,25 @@
                     <TextBlock Foreground="Green">Albums</TextBlock>
                 </PivotItem.Header>
                 <ListBox
-                            x:Name="listAlbums"
-                            ItemsSource="{Binding}"
-                            Foreground="Green"
-                            FontSize="20" SelectionChanged="listAlbum_SelectionChanged">
+                        x:Name="listAlbums"
+                        ItemsSource="{Binding}"
+                        Foreground="Green"
+                        FontSize="20" SelectionChanged="listAlbum_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock
                                                 TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblNameAlbums">
-                                                Name
-                                    </TextBlock>
-                                    <TextBlock
-                                                TextWrapping="Wrap"
                                                 Foreground="Green"
                                                 x:Name="txtNameAlbuns"
-                                                Text="{Binding Name}">
-                                    </TextBlock>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblNameAlbums">
-                                                Genre
+                                                Text="{Binding desc}">
                                     </TextBlock>
                                     <TextBlock
                                                 TextWrapping="Wrap"
                                                 Foreground="Green"
-                                                x:Name="txtGenreAlbums"
-                                                Text="{Binding Genre}">
+                                                x:Name="txtNameYear"
+                                                Text="{Binding year}">
                                     </TextBlock>
                                 </StackPanel>
                             </StackPanel>
@@ -133,29 +99,9 @@
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock
                                                 TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblNameRelacionados">
-                                                Name
-                                    </TextBlock>
-                                    <TextBlock
-                                                TextWrapping="Wrap"
                                                 Foreground="Green"
                                                 x:Name="txtNameRelacionados"
-                                                Text="{Binding Name}">
-                                    </TextBlock>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Gray"
-                                                x:Uid="txblNameRelacionados">
-                                                Genre
-                                    </TextBlock>
-                                    <TextBlock
-                                                TextWrapping="Wrap"
-                                                Foreground="Green"
-                                                x:Name="txtGenreRelacionados"
-                                                Text="{Binding Genre}">
+                                                Text="{Binding name}">
                                     </TextBlock>
                                 </StackPanel>
                             </StackPanel>

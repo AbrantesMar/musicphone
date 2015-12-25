@@ -8,7 +8,52 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <StackPanel
+        Background="White">
+        <StackPanel
+            Background="Green">
+            <TextBlock 
+                Margin="10, 10, 0, 0"
+                FontSize="30">
+                Music Phone
+            </TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Image></Image>
+                <StackPanel>
+                    <TextBlock x:Name="txtName"
+                        FontSize="20"></TextBlock>
+                    <TextBlock x:Name="txtMusic"
+                               FontSize="20"></TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <Pivot Height="571">
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="Green">
+                        Letra
+                    </TextBlock>
+                </PivotItem.Header>
+                <TextBlock
+                    x:Name="txtMusicLetra" 
+                    Height="436"
+                    TextWrapping="Wrap" 
+                    Foreground="Green"
+                    Margin="0,0,-0.333,0"></TextBlock>
+            </PivotItem>
+            <PivotItem>
+                <PivotItem.Header>
+                    <TextBlock Foreground="Green">Tradutions</TextBlock>
+                </PivotItem.Header>
+                <TextBlock
+                    x:Name="txtMusicLTraducao" 
+                    Height="436"
+                    TextWrapping="Wrap" 
+                    Foreground="Green"
+                    Margin="0,0,-0.333,0"></TextBlock>
+            </PivotItem>
+        </Pivot>
 
-    </Grid>
+
+    </StackPanel>
 </Page>

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using MusicPhone.New.Rests;
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace MusicPhone.Domain
 {
@@ -10,7 +12,7 @@ namespace MusicPhone.Domain
         public Music music;
         public string id { get; set; }
         public string name { get; set; }
-        public string url = "http://www.vagalume.com.br/";
+        public string url { get; set; }//= "http://www.vagalume.com.br/";
         public string urlYoutube = "http://www.youtube.com/watch?v=";
         public string UrlYoutube
         {
@@ -40,36 +42,47 @@ namespace MusicPhone.Domain
             public string text { get; set; }
         }
 
-        //public class Mu
-        //{
-        //    public string id { get; set; }
-        //    public string name { get; set; }
-        //    public string url { get; set; }
-        //    public int lang { get; set; }
-        //    public string text { get; set; }
-        //    public List<Translate> translate { get; set; }
-        //}
+        public class Mu
+        {
+            public string id { get; set; }
+            public string name { get; set; }
+            public string url { get; set; }
+            public int lang { get; set; }
+            public string text { get; set; }
+            public List<Translate> translate { get; set; }
+        }
 
         public class RootObject
         {
-            //public string type { get; set; }
+            public string type { get; set; }
             ////nome artista 
-            public Music music { get; set; }
+            public Art art { get; set; }
             ////titulo musica
-            //public List<Music> music { get; set; }
-        }
+            public List<Mu> mus { get; set; }
+            public bool badwords { get; set; }
 
-        public class BuscaEventArgs : EventArgs
+        }
+        public async Task<Music.RootObject> GetMusic(string artist, string nome)
         {
-            public Music music { get; private set; }
-
-            public BuscaEventArgs(Music music)
+            if (!string.IsNullOrEmpty(nome))
             {
-                this.music = music;
+                RootObject rootJson = await BasicRequests<Music.RootObject>.GetJson(null, null, "http://api.vagalume.com.br/search.php?art=" + artist + "&mus=" + nome.Replace(" ", "%20"));
+                return rootJson;
             }
+            else
+                return null;
         }
+        //public class BuscaEventArgs : EventArgs
+        //{
+        //    public Music music { get; private set; }
 
-        public event EventHandler<BuscaEventArgs> BuscaCompleted;
+        //    public BuscaEventArgs(Music music)
+        //    {
+        //        this.music = music;
+        //    }
+        //}
+
+        //public event EventHandler<BuscaEventArgs> BuscaCompleted;
 
         //public void BuscaMusicAsync(string nome)
         //{

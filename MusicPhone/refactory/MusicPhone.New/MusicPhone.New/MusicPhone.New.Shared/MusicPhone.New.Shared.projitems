@@ -16,7 +16,8 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Domain\Album.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Domain\Artista.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Art.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Artist.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Domain\BuscarPorTrecho.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Domain\Discografia.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Domain\Genre.cs" />

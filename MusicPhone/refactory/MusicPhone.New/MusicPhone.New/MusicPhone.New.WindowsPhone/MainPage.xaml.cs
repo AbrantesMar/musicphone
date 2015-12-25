@@ -1,8 +1,12 @@
-﻿using System;
+﻿using MusicPhone.Domain;
+using MusicPhone.New.Rests;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,11 +26,54 @@ namespace MusicPhone.New
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ObservableCollection<All> ArtistDestaque;
+
         public MainPage()
         {
-            this.InitializeComponent();
-
+            this.InitializeComponent();          
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            this.ArtistDestaque = new ObservableCollection<All>();
+            this.listArtist.DataContext = ArtistDestaque;
+            ListArtist(20);
+        }
+
+        private async void ListArtist(int quantidade)
+        {
+            try
+            {
+                RootObject a = await GetArt(quantidade);
+                if (a == null)
+                    return;
+                foreach (var item in a.art.week.all)
+                {
+                    this.ArtistDestaque.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
+        }
+
+        public async Task<RootObject> GetArt(int quantidade)
+        {
+            RootObject a = await BasicRequests<RootObject>.GetJson(null, null, Url(quantidade));
+            return a;
+        }
+
+        public string Url(int quantidade)
+        {
+
+            DateTime dateinit = new DateTime(DateTime.Now.Year, 01, 01);
+            DateTime dateend = DateTime.Now;
+            string semana = totalSemanas(dateinit, dateend).ToString();
+            return "http://api.vagalume.com.br/rank.php?type=art&period=week&periodVal=" + DateTime.Now.Year + semana + "&scope=all&limit=" + quantidade;
+        }
+
+        public int totalSemanas(DateTime dataInicial, DateTime dataFim)
+        {
+            return (int)Math.Ceiling(((dataFim - dataInicial).TotalDays + 1) / 7d);
         }
 
         /// <summary>
@@ -44,7 +91,7 @@ namespace MusicPhone.New
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
-
+ 
         private void listLoads_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -52,12 +99,15 @@ namespace MusicPhone.New
 
         private void listArtist_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var artist = ((sender as ListBox).SelectedItem as All);
+            this.Frame.Navigate(typeof(Artists), artist.name);
 
         }
 
         private void btnAdicionarBar_Click(object sender, RoutedEventArgs e)
         {
-
+            if (!string.IsNullOrEmpty(this.txtName.Text))
+                this.Frame.Navigate(typeof(Artists), this.txtName.Text);
         }
     }
 }
