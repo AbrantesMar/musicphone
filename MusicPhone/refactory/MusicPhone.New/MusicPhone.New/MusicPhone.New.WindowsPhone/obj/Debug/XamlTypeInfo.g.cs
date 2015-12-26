@@ -549,3 +549,4 @@ namespace MusicPhone.New.MusicPhone_New_WindowsPhone_XamlTypeInfo
 }
 
 
+

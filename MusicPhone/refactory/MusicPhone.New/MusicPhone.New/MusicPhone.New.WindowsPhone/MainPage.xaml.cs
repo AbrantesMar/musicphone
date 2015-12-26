@@ -91,7 +91,13 @@ namespace MusicPhone.New
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
- 
+
+        //private void HardwareButtons_BackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
+        //{
+        //    Frame.GoBack();
+        //    e.Handled = true;
+        //}
+
         private void listLoads_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
@@ -100,14 +106,23 @@ namespace MusicPhone.New
         private void listArtist_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var artist = ((sender as ListBox).SelectedItem as All);
+            
             this.Frame.Navigate(typeof(Artists), artist.name);
 
         }
 
         private void btnAdicionarBar_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(this.txtName.Text))
-                this.Frame.Navigate(typeof(Artists), this.txtName.Text);
+            if (!string.IsNullOrEmpty(this.txtName.Text)){
+                string name = this.txtName.Text;
+                if (name.Contains(" & "))
+                    name = name.Replace(" & ", "-");
+                else if (name.Contains(" "))
+                    name = name.Replace(" ", "-");
+                this.Frame.Navigate(typeof(Artists), name);
+            }
+                
+            
         }
     }
 }

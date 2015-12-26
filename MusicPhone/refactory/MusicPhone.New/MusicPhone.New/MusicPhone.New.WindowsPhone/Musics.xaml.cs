@@ -35,7 +35,10 @@ namespace MusicPhone.New
             if (a == null)
                 return;
             this.txtMusicLetra.Text = a.mus.FirstOrDefault().text;
-            this.txtMusicLTraducao.Text = a.mus.FirstOrDefault().translate.FirstOrDefault(t => t.lang.Equals(1)).text;
+            if (a.mus.FirstOrDefault().translate != null)
+            {
+                this.txtMusicLTraducao.Text = a.mus.FirstOrDefault().translate.FirstOrDefault(t => t.lang.Equals(1)).text;
+            }
         }
 
         /// <summary>
@@ -50,6 +53,12 @@ namespace MusicPhone.New
             {
                 BuscarMusica(text[1], text[0]);
             }
+        }
+
+        private void HardwareButtons_BackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
+        {
+            Frame.GoBack();
+            e.Handled = true;
         }
     }
 }

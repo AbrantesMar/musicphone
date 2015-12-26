@@ -45,6 +45,7 @@ namespace MusicPhone.New
             if (a == null)
                 return;
 
+            this.imgArtist.DataContext = a.artist.pic_small;
             for (int i = 0, count = a.artist.genre.Count; i < count; i++)
             {
                 var c = i + 1;
@@ -82,6 +83,12 @@ namespace MusicPhone.New
                 ListArtist(text);
                 //Do your stuff
             }
+        }
+
+        private void HardwareButtons_BackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
+        {
+            Frame.GoBack();
+            e.Handled = true;
         }
 
         private void btnFavoritar_Click(object sender, RoutedEventArgs e)

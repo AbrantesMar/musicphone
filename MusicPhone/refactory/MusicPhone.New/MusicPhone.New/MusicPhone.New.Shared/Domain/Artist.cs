@@ -58,7 +58,12 @@ namespace MusicPhone.Domain
         {
             if (!string.IsNullOrEmpty(nome))
             {
-                RootObject rootJson = await BasicRequests<RootObject>.GetJson(null, nome + "/index.js", null);
+                string name = nome;
+                if (name.Contains(" & "))
+                    name = name.Replace(" & ", "-");
+                else if (name.Contains(" "))
+                    name = name.Replace(" ", "-");
+                RootObject rootJson = await BasicRequests<RootObject>.GetJson(null, name + "/index.js", null);
                 return rootJson;
             }
             else
